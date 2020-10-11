@@ -1,0 +1,172 @@
+body {
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.faq {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Left Side */
+.left-side-background {
+  background: url('../img/low-res-background.jpg');
+  background-position: 47%;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+@media only screen and (min-width: 1280px) {
+  .left-side-background {
+    background-image: url('../img/high-res-background.jpg');
+  }
+}
+
+.left-side-main-header {
+  font-size: 20px;
+  padding: 38px 0 0 38px;
+}
+
+.left-side-headline {
+  font-size: 45px;
+  padding-left: 38px;
+}
+
+.left-side-footer {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 17px;
+  padding-left: 38px;
+}
+
+.left-side-footer:before {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 2px;
+  position: relative;
+  top: -20px;
+  width: 10%;
+}
+
+/* Right Side */
+.right-side-content {
+  height: 100vh;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow-y: scroll;
+  width: 50vw;
+}
+
+.main-header {
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.item:first-child {
+  border-top: 1px solid #d8d8d8;
+}
+
+.item {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.question {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.question-p {
+  font-weight: 600;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.answer-p {
+  color: #565656;
+  line-height: 20px;
+  font-size: 10px;
+}
+
+/* Responsive */
+@media only screen and (min-width: 2560px) {
+  .question-p {
+    font-size: 24px;
+  }
+
+  .answer-p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .faq {
+    flex-direction: column;
+  }
+
+  .left-side-background,
+  .right-side-content {
+    padding-right: 0;
+    width: 100vw;
+  }
+
+  .left-side-background {
+    height: 85vh;
+  }
+
+  .right-side-content {
+    padding-top: 35px;
+  }
+
+  .items {
+    padding-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .left-side-background {
+    height: auto;
+    padding-left: 0;
+  }
+
+  .left-side-headline {
+    font-size: 15px;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  .left-side-footer {
+    font-size: 12px;
+    margin: auto;
+  }
+
+  .left-side-footer:before {
+    margin: auto;
+  }
+
+  .right-side-content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .items {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
